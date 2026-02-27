@@ -28,6 +28,7 @@ body{
     font-family: 'Poppins', sans-serif;
     background: var(--crema);
     color:#333;
+    overflow-x:hidden; /* evita que algo se salga en móvil */
 }
 
 /* NAVBAR */
@@ -122,8 +123,10 @@ footer{
 
 /* RESPONSIVE */
 @media(max-width:900px){
+
     .section{
-        flex-direction:column;
+        flex-direction:column !important;
+        text-align:center;
     }
 
     .section img,
@@ -134,6 +137,7 @@ footer{
     header h2{
         font-size:2rem;
     }
+
 }
 
 </style>
@@ -145,7 +149,7 @@ footer{
 </nav>
 
 <header>
-    <div data-aos="fade-down">
+    <div data-aos="fade-up">
         <h2>La Leyenda de la Papa</h2>
         <p>Relato ancestral de los Andes Bolivianos</p>
     </div>
@@ -154,7 +158,7 @@ footer{
 <div class="container">
 
     <!-- SECCIÓN 1 -->
-    <div class="section" data-aos="fade-right">
+    <div class="section" data-aos="fade-up">
         <img src="camp pap.jpg" alt="Campo de papas en los Andes">
         
         <div class="text">
@@ -174,7 +178,7 @@ footer{
     </div>
 
     <!-- SECCIÓN 2 -->
-    <div class="section" data-aos="fade-left">
+    <div class="section" data-aos="fade-up">
         <img src="donc.png" alt="Doncella en la montaña">
         
         <div class="text">
@@ -193,7 +197,7 @@ footer{
     </div>
 
     <!-- SECCIÓN 3 -->
-    <div class="section" data-aos="zoom-in">
+    <div class="section" data-aos="fade-up">
         <img src="pap cosech.jpg" alt="Papas recién cosechadas">
         
         <div class="text">
@@ -222,8 +226,9 @@ footer{
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
 AOS.init({
-    duration:1200,
-    once:true
+    duration:1000,
+    once:true,
+    offset:100
 });
 </script>
 
