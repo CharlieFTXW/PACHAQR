@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Leyenda de la Papa | Cultura Boliviana</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+
+:root{
+    --rojo: #d62828;
+    --amarillo: #fcbf49;
+    --verde: #2a9d8f;
+    --marron: #6d4c41;
+    --crema: #fdf0d5;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: var(--crema);
+    color:#333;
+}
+
+/* NAVBAR */
+nav{
+    background: linear-gradient(to right, var(--rojo), var(--amarillo), var(--verde));
+    padding:15px 5%;
+    text-align:center;
+}
+
+nav h1{
+    font-family: 'Playfair Display', serif;
+    color:white;
+    font-size:1.7rem;
+}
+
+/* HERO */
+header{
+    height:80vh;
+    background:url('bg-andes.jpg') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
+    position:relative;
+}
+
+header::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+}
+
+header div{
+    position:relative;
+    color:white;
+}
+
+header h2{
+    font-size:3rem;
+    font-family:'Playfair Display', serif;
+}
+
+/* SECTIONS */
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:80px auto;
+}
+
+.section{
+    display:flex;
+    gap:40px;
+    align-items:center;
+    margin-bottom:80px;
+}
+
+.section:nth-child(even){
+    flex-direction:row-reverse;
+}
+
+.section img{
+    width:50%;
+    border-radius:10px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.section .text{
+    width:50%;
+}
+
+.section h3{
+    font-family:'Playfair Display', serif;
+    color:var(--rojo);
+    margin-bottom:15px;
+    font-size:2rem;
+}
+
+.section p{
+    line-height:1.8;
+}
+
+/* FOOTER */
+footer{
+    background:var(--marron);
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .section{
+        flex-direction:column;
+    }
+
+    .section img,
+    .section .text{
+        width:100%;
+    }
+
+    header h2{
+        font-size:2rem;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+    <h1>Cultura Boliviana</h1>
+</nav>
+
+<header>
+    <div data-aos="fade-down">
+        <h2>La Leyenda de la Papa</h2>
+        <p>Relato ancestral de los Andes Bolivianos</p>
+    </div>
+</header>
+
+<div class="container">
+
+    <!-- SECCIÓN 1 -->
+    <div class="section" data-aos="fade-right">
+        <img src="camp pap.jpg" alt="Campo de papas en los Andes">
+        
+        <div class="text">
+            <h3>Un Pueblo en Necesidad</h3>
+            <p>
+                Hace muchos siglos, en las alturas del altiplano boliviano,
+                un pequeño pueblo vivía en armonía con la naturaleza.
+                Pero llegó una época de gran sequía y heladas intensas.
+                Las cosechas se perdieron y el hambre comenzó a apoderarse
+                de hombres, mujeres y niños.
+            </p>
+            <p>
+                Desesperados, los ancianos dijeron que solo los dioses de las montañas,
+                los Achachilas, podían devolver la vida a la tierra.
+            </p>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 2 -->
+    <div class="section" data-aos="fade-left">
+        <img src="donc.png" alt="Doncella en la montaña">
+        
+        <div class="text">
+            <h3>El Sacrificio de la Doncella</h3>
+            <p>
+                Una joven valiente del pueblo decidió ofrecerse como sacrificio.
+                Subió a la montaña más alta para implorar a los dioses
+                que salvaran a su gente.
+            </p>
+            <p>
+                Con lágrimas en los ojos y el corazón lleno de amor por su comunidad,
+                pidió que su vida se transformara en alimento eterno.
+                Los dioses, conmovidos por su nobleza, aceptaron su ofrenda.
+            </p>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 3 -->
+    <div class="section" data-aos="zoom-in">
+        <img src="pap cosech.jpg" alt="Papas recién cosechadas">
+        
+        <div class="text">
+            <h3>El Nacimiento de la Papa</h3>
+            <p>
+                Al amanecer, en el lugar donde cayó la joven,
+                comenzaron a brotar pequeñas plantas verdes.
+                Bajo la tierra crecían tubérculos fuertes y resistentes al frío.
+            </p>
+            <p>
+                El pueblo descubrió que aquel nuevo alimento
+                era nutritivo y capaz de sobrevivir en las duras condiciones
+                del altiplano. Así nació la papa,
+                considerada desde entonces un regalo sagrado
+                y símbolo de vida, esperanza y sacrificio en la cultura andina.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 - Historia y Tradición Boliviana
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({
+    duration:1200,
+    once:true
+});
+</script>
+
+</body>
+</html>
